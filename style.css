@@ -65,3 +65,86 @@ aside > :last-child,
 	- 640px
 	- 1000px
 */
+
+/* výchozí nastavení */
+.kontejner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reklama2 {
+  margin-top: 20px;
+} 
+
+/* BP 640px */
+@media (min-width: 640px) {
+.kontejner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu {
+  flex: 100%;
+}
+
+.obsah {
+  display: flex;
+  flex-direction: row;
+}
+
+.clanek {
+  flex: 60%;
+}
+
+.reklamy {
+  flex: 40%;
+}
+
+.reklama2 {
+  margin-top: 20px;
+}
+
+}
+
+/* BP 1000px */
+@media (min-width: 1000px) {
+.kontejner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu {
+  flex: 25%;
+}
+
+.obsah {
+  flex: 75%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.clanek{
+  flex: 100%;
+}
+
+.reklamy {
+  display: flex;
+  align-items: stretch;
+ 
+}
+
+.reklama1 {
+  flex: 50%;
+  margin-right: 10px;  /* odskok mezi prvky jde řešit i pomocí nastavení gap na rodičovský prvek (reklamy) - nastaví mezeru mezi prvky uvnitř kontejneru - gap: 20px; */
+}
+
+.reklama2 {
+  flex: 50%;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+} 
